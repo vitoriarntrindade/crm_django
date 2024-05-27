@@ -1,5 +1,6 @@
-# CRM-implementando-um-sistema-de-clientes (Django)
-Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Django. O sistema permite listar, cadastrar e excluir usuários. (CRUD)
+# CRM (Customer Relationship Management) - Implementando um sistema de clientes (Django)
+
+O projeto trata-se da elaboração de um CRUD de Cliente utilizando Python, Django e Bootstrap com autenticação. É abordado tópicos importante do Django como models, forms e class-based views.
 
 
 ## Funcionalidades
@@ -9,6 +10,8 @@ Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Dja
   **Cadastrar Usuários**: Adicione novos usuários ao CRM.
   
   **Excluir Usuários**: Remova usuários existentes do sistema.
+  
+  **Atualizar dados**: Faça atualizações nos dados de clientes existentes no sistema, a partir do ID do cliente.
 
 ## Tecnologias Utilizadas
 
@@ -16,4 +19,4 @@ Este é um projeto de CRM (Customer Relationship Management) desenvolvido em Dja
   
   **SQLite**: Banco de dados utilizado para armazenar os dados dos usuários.
   
-  **HTML/CSS**: Para a interface do usuário.
+  **HTML/CSS/Bootstrap**: Para a interface do usuário.
