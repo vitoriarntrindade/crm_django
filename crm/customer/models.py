@@ -3,8 +3,8 @@ from django.urls import reverse
 
 
 class Customer(models.Model):
-    first_name = models.CharField(max_length=30)
-    last_name = models.CharField(max_length=30)
+    first_name = models.CharField(max_length=35)
+    last_name = models.CharField(max_length=35)
     email = models.EmailField()
     birth_date = models.DateField()
     area_code = models.CharField(max_length=3)
