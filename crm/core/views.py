@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate, login as app_login
 from django.contrib import messages
+from django.contrib.auth import (authenticate,
+                                 logout as app_logout,
+                                 login as app_login)
 
 
 def login(request):
@@ -19,3 +21,8 @@ def submit_login(request):
         else:
             messages.error(request, "Invalid username/password. Please, try again")
     return redirect("login")
+
+
+def logout(request):
+    app_logout(request)
+    return redirect('login')
