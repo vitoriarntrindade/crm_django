@@ -1,0 +1,48 @@
+{% extends "model-page.html"%}
+
+    {% block content %}
+    <h2>Customers</h2>
+
+    <a href={% url "customer:customer-create" %} >
+        <button
+            type="button"
+            class="btn btn-success"
+            style="float: right;
+            margin-bottom: 5px;"
+            >Add customer
+        </button>
+    </a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>City</th>
+                <th>Phone </th>
+                <th>Email</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for customer in customer_list%}
+                <tr>
+                    <td> <a href="">{{customer.get_absolute_url}} </a>
+                     {{ customer.get_full_name }}</td>
+                        <td> {{customer.get_full_city}}</td>
+                        <td> {{customer.get_full_phone_number}}</td>
+                        <td> {{customer.email}} </td>
+                        <td>
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-danger">Delete </button>
+                            </form>
+
+                        </td>
+
+                </tr>
+            {%endfor%}
+
+        </tbody>
+
+    </table>
+    {% endblock %}

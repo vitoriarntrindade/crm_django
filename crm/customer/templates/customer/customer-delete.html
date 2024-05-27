@@ -1,0 +1,15 @@
+{% extends "model-page.html"%}
+
+    {% block content %}
+
+    <form method="post">
+    {% csrf_token %}
+
+    Você tem certeza que quer excluir  <b>{{ customer.id }}</b>? <br><br>
+
+    <button type="button">
+        <a href="{% url 'customer_list' %}">Cancelar</a>
+    </button>
+    <button>Excluir</button>
+</form>
+    {% endblock %}
