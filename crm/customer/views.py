@@ -13,6 +13,7 @@ class CustomerListView(ListView):
     template_name = "customer/customer_list.html"
     model = Customer
     queryset = Customer.objects.all()
+    paginate_by = 5
 
 
 class CustomerCreateView(CreateView):
