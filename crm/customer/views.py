@@ -20,9 +20,9 @@ class CustomerListView(ListView):
         if name:
             object_list = self.model.objects.filter(
                 Q(first_name__icontains=name) | Q(last_name__icontains=name)
-            )
+            ).order_by('id')
         else:
-            object_list = self.model.objects.all()
+            object_list = self.model.objects.all().order_by('id')
         return object_list
 
 
