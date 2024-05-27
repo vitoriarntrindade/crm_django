@@ -9,28 +9,24 @@ class DateInput(forms.DateInput):
 
 class CustomerForm(forms.ModelForm):
     first_name = forms.CharField(
-        label="Nome",
-        error_messages={"max_length": "Nome não pode ter mais de 30 caracteres"}
+        error_messages={"max_length": "First name cannot be longer than 30 characters"}
     )
     last_name = forms.CharField(
-        label="Sobrenome",
-        error_messages={"max_length": "Sobrenome não pode ter mais de 30 caracteres"}
+        error_messages={"max_length": "Last name cannot be longer than 30 characterss"}
     )
-    email = forms.EmailField(label="E-mail")
-    birth_date = forms.DateField(label="Data de Nascimento", widget=DateInput())
+    email = forms.EmailField()
+    birth_date = forms.DateField(widget=DateInput())
     area_code = forms.RegexField(
-        label="DDD",
         regex=r"^\+?1?[0-9]{2}$",
-        error_messages={"invalid": "Número de DDD inválido"}
+        error_messages={"Invalid": "Invalid area code"}
     )
     phone_number = forms.RegexField(
-        label="Telefone",
         regex=r"^\+?1?[0-9]{9,15}$",
-        error_messages={"invalid": "Número de telefone inválido"}
+        error_messages={"invalid": "Invalid phone number"}
     )
-    country = forms.CharField(label="País")
-    state = forms.CharField(label="Estado")
-    city = forms.CharField(label="Cidade")
+    country = forms.CharField()
+    state = forms.CharField()
+    city = forms.CharField()
 
     class Meta:
         model = Customer
@@ -45,3 +41,4 @@ class CustomerForm(forms.ModelForm):
             "state",
             "city",
         )
+
