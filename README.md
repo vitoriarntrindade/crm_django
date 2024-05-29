@@ -1,4 +1,4 @@
-# CRM (Customer Relationship Management) - Implementando um sistema de clientes (Django)
+# CRM (Customer Relationship Management) - Implementando um sistema de cadastro de clientes (Django)
 
 O projeto trata-se da elaboração de um CRUD de Cliente utilizando Python, Django e Bootstrap com autenticação. É abordado tópicos importante do Django como models, forms e class-based views.
 
